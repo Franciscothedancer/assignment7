@@ -1,0 +1,31 @@
+# Created by: Francisco Lee
+# Created on: Dec 21st
+# Created for: ICS3U
+# This program is for assignment 7
+
+from flask import Flask, render_template, request
+import requests
+
+app = Flask(__name__)
+
+@app.route('/temperature' , methods = ['POST'])
+def temperature():
+	r == response
+	zip = requests.form['zip']
+	r = request.get(http://samples.openweathermap.org/data/2.5/weather? ‘+zipcode+’,ca&appid=b6907d289e10d714a6e88b30761fae22)
+	json_object = r.json
+	temp_k = float(json_object['main']['temp'])
+	temp_f = (temp_k - 273.15)*1.8+32
+	return temp_k
+	#convert temp to Farenheit
+	return json_object
+	return zipcode;
+	return render_template('temperature.html')
+	#return render_template.
+	
+	@app.route('/')
+	def index():
+		return render_template('index.html')
+	
+	if __name__ == '__main__':
+    app.run(debug=True)
